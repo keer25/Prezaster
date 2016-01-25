@@ -16,6 +16,10 @@ public class Intro extends AppCompatActivity {
     }
 
     public void signup(View view) {
-        startActivity(new Intent(this,Signup.class));
+        startActivity(new Intent(this, Signup.class));
+    }
+
+    public void login(View view) {
+        startActivity(new Intent(this, Login.class));
     }
 }

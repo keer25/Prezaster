@@ -5,7 +5,7 @@
     android:weightSum="1">
     <TextView
         android:layout_width="357dp"
-        android:layout_height="25dp"
+        android:layout_height="0dp"
         android:text="@string/AdPrezaster"
         android:id="@+id/textView"
         android:layout_weight="0.05" />
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:id="@+id/ilogin"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:onClick="login" />
 
 </LinearLayout>

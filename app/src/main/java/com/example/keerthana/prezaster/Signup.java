@@ -18,7 +18,7 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
     }
     //TODO Add string resources for the function and layout
-    public void authUser(View view){
+    public void createUser(View view){
         Log.i("Flow", "Signup called");
         String username = ((EditText) findViewById(R.id.sname)).getText().toString();
         String password = ((EditText) findViewById(R.id.spass)).getText().toString();
