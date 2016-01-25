@@ -26,4 +26,16 @@ public class UserSpace extends AppCompatActivity {
     public void logout(MenuItem item) {
         startActivity(new Intent(this, Logout.class));
     }
+
+    public void create(View view) {
+        startActivity(new Intent(this, CreatePost.class) );
+    }
+
+    public void seeexp(View view) {
+
+    }
+
+    public void createexp(View view) {
+
+    }
 }

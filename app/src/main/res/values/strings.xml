@@ -7,5 +7,11 @@
     <string name="AdPrezaster">Signup for Prezaster</string>
     <string name="logconf">Logged in</string>
     <string name="logout">LOGOUT</string>
+    <string name="createp">Add a Post</string>
+    <string name="expertp">See Expert Posts in your area</string>
+    <string name="communityp">See Community Posts in Your Area</string>
+    <string name="useloc">Use current location\n (You will be able to choose a differrent location if left unchecked)</string>
+    <string name="submitp">Submit Post</string>
+    <string name="pickplace">PICK A PLACE AND POST</string>
 
 </resources>

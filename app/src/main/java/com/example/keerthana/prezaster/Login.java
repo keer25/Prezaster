@@ -1,5 +1,6 @@
 package com.example.keerthana.prezaster;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +43,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this,e.getMessage(),Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(Login.this,"Logged in", Toast.LENGTH_SHORT).show();
-                        //Redirect to user feed
+                        startActivity(new Intent(getApplicationContext(), UserSpace.class));
                     }
                 }
             });

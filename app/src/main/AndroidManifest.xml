@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:name=".StarterApplication"
@@ -12,6 +13,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDXaXQDLy9lV60po62YfK3T60ssokjgoog"/>
+
+
         <meta-data
             android:name="com.parse.APPLICATION_ID"
             android:value="4sqBkerdRaCKVYQ8iRVWLbI8MpVLQCWOLiB3tVMJ" />
@@ -30,7 +41,8 @@
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".UserSpace" />
-        <activity android:name=".Logout"></activity>
+        <activity android:name=".Logout" />
+        <activity android:name=".CreatePost"/>
     </application>
 
 </manifest>

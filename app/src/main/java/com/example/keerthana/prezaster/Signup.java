@@ -1,5 +1,6 @@
 package com.example.keerthana.prezaster;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,7 +55,7 @@ public class Signup extends AppCompatActivity {
                         Toast.makeText(Signup.this,e.getMessage(),Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(Signup.this,"Account Created", Toast.LENGTH_LONG).show();
-                        //Redirect to user feed
+                        startActivity(new Intent(getApplicationContext(),UserSpace.class));
                     }
                 }
             });
