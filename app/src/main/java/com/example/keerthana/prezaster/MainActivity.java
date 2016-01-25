@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         if (ParseUser.getCurrentUser() != null){
             //Navigating to login activity
             Log.i("Flow","User Registered");
+            startActivity(new Intent(this, UserSpace.class));
         } else {
             //Show Welcome activity
             Log.i("Flow", "Intro intent");

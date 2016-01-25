@@ -28,7 +28,9 @@
         </activity>
         <activity android:name=".Intro" />
         <activity android:name=".Signup" />
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".UserSpace" />
+        <activity android:name=".Logout"></activity>
     </application>
 
 </manifest>

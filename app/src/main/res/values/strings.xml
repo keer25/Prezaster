@@ -6,5 +6,6 @@
     <string name="login">LOGIN</string>
     <string name="AdPrezaster">Signup for Prezaster</string>
     <string name="logconf">Logged in</string>
+    <string name="logout">LOGOUT</string>
 
 </resources>
