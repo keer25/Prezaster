@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/signup"
         android:id="@+id/isignup"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:onClick="signup" />
 
     <Button
         android:layout_width="wrap_content"
