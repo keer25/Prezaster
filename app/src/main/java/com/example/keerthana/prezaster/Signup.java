@@ -47,6 +47,7 @@ public class Signup extends AppCompatActivity {
             ParseUser user = new ParseUser();
             user.setUsername(username);
             user.setPassword(password);
+            user.put("reputation", 0);
             //Signing up in the cloud
             user.signUpInBackground(new SignUpCallback() {
                 @Override

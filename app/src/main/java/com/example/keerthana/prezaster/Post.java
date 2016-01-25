@@ -59,6 +59,14 @@ public class Post extends ParseObject {
         put("location", value);
     }
 
+    public int getUpvotes() {return getInt("upvotes");}
+
+    public void setUpvotes(int value) { put("upvotes",value); }
+
+    public int getDownVotes() { return getInt("downvotes"); }
+
+    public void setDownVotes(int value ) { put("downvotes",value); }
+
     public static ParseQuery<Post> getQuery() {
         return ParseQuery.getQuery(Post.class);
     }

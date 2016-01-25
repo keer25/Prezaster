@@ -25,6 +25,7 @@ import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseACL;
 import com.parse.ParseGeoPoint;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 public class CreatePost extends AppCompatActivity
@@ -46,19 +47,6 @@ public class CreatePost extends AppCompatActivity
 
     }
 
-/*
-    @Override
-    protected void onStart() {
-        mGoogleApiClient.connect();
-        super.onStart();
-    }
-
-    @Override
-    protected void onStop () {
-        mGoogleApiClient.disconnect();
-        super.onStop();
-    }
-    */
 
     public void pick (View view) {
         try {
@@ -67,7 +55,7 @@ public class CreatePost extends AppCompatActivity
                             .build(this);
             startActivityForResult(intent, 1);
         } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
-            Log.e("Custorm","Error GP");
+            Log.e("Custom","Error GP");
             Toast.makeText(CreatePost.this,"Unable to access google play services at the moment",Toast.LENGTH_LONG).show();
             startActivity(new Intent(this, UserSpace.class));
         }
@@ -86,6 +74,12 @@ public class CreatePost extends AppCompatActivity
                     Post post = new Post();
                     post.setHead(((EditText) findViewById(R.id.phead)).getText().toString());
                     post.setBody(((EditText) findViewById(R.id.pbody)).getText().toString());
+                    post.setUser(ParseUser.getCurrentUser());
+                    if (ParseUser.getCurrentUser().getInt("reputation") >= 100) {
+                        post.put("type","expert");
+                    } else {
+                        post.put("type","community");
+                    }
                     LatLng latlng = place.getLatLng();
                     ParseGeoPoint geoPoint = new ParseGeoPoint(latlng.latitude, latlng.longitude);
                     post.setLocation(geoPoint);
@@ -98,7 +92,8 @@ public class CreatePost extends AppCompatActivity
                         @Override
                         public void done(com.parse.ParseException e) {
                             finish();
-                            Toast.makeText(CreatePost.this,"Content Posted", Toast.LENGTH_LONG);
+                            Toast.makeText(CreatePost.this,"Content Posted", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(),UserSpace.class));
                         }
                     });
 

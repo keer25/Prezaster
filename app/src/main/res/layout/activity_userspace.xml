@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="@string/expertp"
         android:id="@+id/expertp"
-        android:onClick="viewexp"/>
+        android:onClick="seeexp"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -26,5 +26,5 @@
         android:layout_height="wrap_content"
         android:text="@string/communityp"
         android:id="@+id/communityp"
-        android:onClick="viewcom"/>
+        android:onClick="seecom"/>
 </LinearLayout>
