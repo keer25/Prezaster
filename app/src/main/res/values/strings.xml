@@ -2,5 +2,8 @@
     <string name="app_name">Prezaster</string>
     <string name="parse_app_id">4sqBkerdRaCKVYQ8iRVWLbI8MpVLQCWOLiB3tVMJ</string>
     <string name="parse_client_key">IXTZ3jKRKxc7TsifwKeHmGsSpYqOcVmmpNdpQfmP</string>
+    <string name="signup">SIGNUP</string>
+    <string name="login">LOGIN</string>
+    <string name="AdPrezaster">Signup for Prezaster</string>
 
 </resources>
